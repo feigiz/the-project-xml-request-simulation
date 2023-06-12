@@ -1,0 +1,100 @@
+h1 {
+    color: rgb(37, 86, 131);
+    font-size: 100px;
+    /* font-family: 'Finger Paint', Arial, Helvetica, sans-serif;*/
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10%;
+    background-color: rgb(106, 143, 177);
+    border-color: rgb(37, 86, 131);
+    color: rgb(30, 62, 92);
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+}
+
+button:hover {
+    background-color: rgb(192, 216, 238);
+    border-color: rgb(15, 41, 66);
+    color: rgb(15, 41, 66);
+}
+
+select,
+input {
+    margin: 20px 30px 20px 10px;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: rgb(164, 198, 230);
+    color: rgb(30, 62, 92);
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid rgb(37, 86, 131);
+}
+
+label {
+    color: rgb(51, 88, 122);
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(192, 216, 238);
+}
+
+#send_new_product_btn {
+    display: inline;
+    margin: 20px;
+    padding: 10px;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#switch_to_sign_up,
+#switch_to_log_in {
+    background: local;
+    float: right;
+}
+
+#log_in_btn,
+#sign_up_btn {
+    display: inline;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    margin: 30px;
+    color: rgb(30, 62, 92);
+    font-family: Arial;
+    border-radius: 10%;
+}
+
+table td {
+    border: 2px rgb(37, 86, 131);
+    padding: 8px 16px;
+}
+
+table tr:nth-child(odd) td {
+    background-color: rgb(106, 143, 177);
+}
+
+table th {
+    color: rgb(37, 86, 131);
+    padding: 8px 16px;
+    font-size: x-large;
+    font-family: Georgia;
+}
+
+/* border-radius: 10%;
+background-color: rgb(106, 143, 177);
+border-color: rgb(37, 86, 131);
+color: rgb(30, 62, 92); */
+.name_column{
+    width: 200px;
+}

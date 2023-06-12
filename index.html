@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <main id="main_content">
+    </main>
+    <template id="log_in">
+        <form onsubmit="login(event)">
+            <h1>log in</h1>
+            <label for="email_login">email</label>
+            <input type="email" id="email_login" required>
+            <label for="psw_login">password</label>
+            <input type="password" id="psw_login" required>
+            <button type="submit" id="log_in_btn">log in</button>
+            <button id="switch_to_sign_up">sign up</button>
+        </form>
+    </template>
+
+    <template id="sign_up">
+        <form id="sign_up_form" onsubmit="signup(event)">
+            <h1>sign up</h1>
+            <label for="name_sign_up">name</label>
+            <input type="text" id="name_sign_up" required>
+            <label for="email_sign_up">email</label>
+            <input type="email" id="email_sign_up" required>
+            <label for="psw_sign_up">password</label>
+            <input type="password" id="psw_sign_up" required>
+            <label for="psw_sign_up_verify">password verification</label>
+            <input type="password" id="psw_sign_up_verify" required>
+            <button type="submit" id="sign_up_btn">sign up</button>
+            <button id="switch_to_log_in">log in</button>
+        </form>
+    </template>
+
+    <template id="main">
+        <h1>my shopping list</h1>
+        <button id="add_product_btn">add new product</button>
+        <form id="add_product_form" onsubmit="post(event)"></form>
+        <button id="delete_product_btn">delete product</button>
+        <button id="show_list_btn">show updated list</button>
+        <button id="show_category_btn">show products by category</button>
+        <form id="category_to_get" onsubmit="get(event)"></form>
+        <table id="list_table"></table>
+        <h2 id="fail_message"></h2>
+    </template>
+    
+</body>
+<!-- <script src="../js/FAJAX.js"></script> -->
+
+
+<!-- <script src="../js/client.js"></script> -->
+
+<script src="../js/login.js"></script>
+<script src="../js/user.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/DB.js"></script>
+<script src="../js/server.js"></script>
+<script src="../js/network.js"></script>
+<script src="../js/client.js"></script>
+<script src="../js/FAJAX.js"></script>
+<script src="../js/product.js"></script>
+</html>
+
+
+
+
+<!-- אם מכניסים שני מוצרים בעלי אותו שם -->
+<!--@ המייל עובד בלי  -->
