@@ -13,6 +13,16 @@ function login(event) {
         if (password == user.password) {
             // localStorage.removeItem("current_User");
             localStorage.setItem("current_User", JSON.stringify(user));
+
+            //////////////////////////////////////////////////////////
+            // let currentPage = 'main';
+            // document.querySelector('.active').classList.remove('active');
+            // document.getElementById(currentPage).classList.add('active');
+            // console.log(currentPage)
+            // history.pushState({}, currentPage, `#${currentPage}`);
+            // document.getElementById(currentPage).dispatchEvent(app.show);
+            /////////////////////////////////////////////////////////////////
+
             show_main();
         }
         else {
@@ -47,4 +57,7 @@ function signup(event) {
 }
 
 
+
+
+// כפתור ללוג אאוט
 //שיהיה דרך השרת

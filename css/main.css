@@ -15,7 +15,7 @@ button {
     color: rgb(30, 62, 92);
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
-    display: block;
+    /* display: block; */ 
 }
 
 button:hover {
@@ -97,4 +97,8 @@ border-color: rgb(37, 86, 131);
 color: rgb(30, 62, 92); */
 .name_column{
     width: 200px;
+}
+
+#category_to_get{
+    display: inline;
 }

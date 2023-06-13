@@ -1,19 +1,4 @@
-// function POST(userName, data, s_request){
-//     localStorage.setItem(userName, JSON.stringify(data));
-//     s_request.status = 200;
-// }
-// function break_up_url(url) {
-//     let url_array = url.split('/');
-//     let kind = url_array[1];
-//     let user_information = url_array[2];
-// }
-function POST(data, url) {
-    // localStorage.setItem(JSON.stringify("list for " + email), JSON.stringify(data))
-    // return "";
-
-    let url_array = url.split('/');
-    let kind = url_array[1];
-    let user_information = url_array[2];
+function POST(data, kind, user_information) {
     let products = JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)));
     if (products == null)
         products = [];
@@ -29,40 +14,22 @@ function POST(data, url) {
     }
     products.push(data);
     localStorage.setItem(JSON.stringify(kind + " " + user_information), JSON.stringify(products));
-    // throw -1;
-    return [true];
 }
 
-function GET(url) {
-    let url_array = url.split('/');
-    let kind = url_array[1];
-    let user_information = url_array[2];
-    // if(url_array[3] == null) {
-    //     return [true, JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)))];
-    // }
-    // else{
-    //     let category_products = [];
-    //     let products = JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)));
-    //     for (let i = 0; i < products.length; i++) {
-    //         if(products[i].category == url_array[3]){
-    //             category_products.push(products[i]);
-    //             return [true, category_products];
-    //         }
-    //     }
-    // }
-
-    if (url_array[3] == null) {
-        return [true, JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)))];
+function GET(kind, user_information, category_to_get) {
+    if (category_to_get == null) {
+        return {"status":200, "data":JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)))};
     }
     else {
         let category_products = [];
         let products = JSON.parse(localStorage.getItem(JSON.stringify(kind + " " + user_information)));
         for (let i = 0; i < products.length; i++) {
-            if (products[i].category == url_array[3]) {
+            if (products[i].category == category_to_get) {
                 category_products.push(products[i]);
             }
         }
-        return [true, category_products];
+        return  {"status":200, "data":category_products};//*
+        //לעשות אובייקט
     }
 }
 
