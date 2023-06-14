@@ -12,6 +12,24 @@
 <body>
     <main id="main_content">
     </main>
+    <template id="main" class="page">
+        <h1>my shopping list</h1>
+        <button id="add_product_btn">add new product</button>
+        <!-- <button id="update_product_btn">update product</button> -->
+        <button id="show_list_btn">show updated list</button>
+        <button id="show_category_btn">show products by category</button>
+        <form id="category_to_get" onsubmit="get_ctg(event)"></form>
+        <form id="add_product_form" onsubmit="post(event)"></form>
+        <div id="table_container">
+            <h2 id="list_titel"></h2>
+            <table id="list_table"></table>
+            <button id="hide_table_btn">hide table</button>
+        </div>
+
+        <h2 id="fail_message"></h2>
+        <button id="log_out">log out</button>
+    </template>
+
     <template id="log_in" class="page active">
         <form onsubmit="login(event)">
             <h1>log in</h1>
@@ -40,36 +58,25 @@
         </form>
     </template>
 
-    <template id="main" class="page">
-        <h1>my shopping list</h1>
-        <button id="add_product_btn">add new product</button>
-
-        <button id="delete_product_btn">delete product</button>
-        <button id="show_list_btn">show updated list</button>
-        <button id="show_category_btn">show products by category</button>
-              
-        <form id="category_to_get" onsubmit="get_ctg(event)"></form>
-        <form id="add_product_form" onsubmit="post(event)"></form>  
-        <table id="list_table"></table>
-        <h2 id="fail_message"></h2>
-        <button id="log_out">log out</button>
-    </template>
-    
 </body>
 <!-- <script src="../js/FAJAX.js"></script> -->
 
 
 <!-- <script src="../js/client.js"></script> -->
 
-<script src="../js/login.js"></script>
+
 <script src="../js/user.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/DB.js"></script>
 <script src="../js/server.js"></script>
 <script src="../js/network.js"></script>
+
 <script src="../js/client.js"></script>
+
 <script src="../js/FAJAX.js"></script>
+<script src="../js/login.js"></script>
 <script src="../js/product.js"></script>
+
 </html>
 
 
@@ -77,3 +84,7 @@
 
 <!-- אם מכניסים שני מוצרים בעלי אותו שם -->
 <!--@ המייל עובד בלי  -->
+<!-- למה ברפרוש עובר לlogin -->
+
+<!-- להוריד את המחירים? -->
+<!-- הסתרת טבלה ושדות הוספה באופן ידני -->
